@@ -32,13 +32,6 @@ jobs:
       - run: dart analyze
       # run test
       - run: flutter test
-      # packages test
-      - run: flutter test packages/api/test
-      - run: flutter test packages/auth/test
-      - run: flutter test packages/frame/test
-      - run: flutter test packages/models/test
-      - run: flutter test packages/repositories/test
-      - run: flutter test packages/services/test
       # run build
       - run: flutter build apk --flavor dev -t lib/main_dev.dart --release --split-per-abi
       - run: ls ./build/app/outputs/flutter-apk
