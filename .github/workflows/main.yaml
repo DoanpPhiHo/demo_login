@@ -33,7 +33,7 @@ jobs:
       # run test
       - run: flutter test
       # run build
-      - run: flutter build apk --flavor dev -t lib/main_dev.dart --release --split-per-abi
+      - run: flutter build apk --release --split-per-abi
       - run: ls ./build/app/outputs/flutter-apk
       # release apk
       - name: Create a Release APK
