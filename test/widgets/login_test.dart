@@ -10,7 +10,7 @@ void main() {
       home: LoginPage(),
     ));
 
-    final buttonFinder = find.bySubtype<TextButton>();
+    final buttonFinder = find.bySubtype<ElevatedButton>();
     final emailErrorFinder = find.text('Maximum length 256 characters');
 
     await tester.tap(buttonFinder);
@@ -24,7 +24,7 @@ void main() {
     ));
     final emailWidgetFinder = find.bySubtype<TextFormField>().first;
     await tester.enterText(emailWidgetFinder, 'text@gmail.com');
-    final buttonFinder = find.bySubtype<TextButton>();
+    final buttonFinder = find.bySubtype<ElevatedButton>();
     final emailErrorFinder =
         find.text('Password must be at least 6 characters');
 
@@ -44,7 +44,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
     ));
-    final login = find.bySubtype<TextButton>();
+    final login = find.bySubtype<ElevatedButton>();
     expect(login, findsOneWidget);
     await tester.tap(login);
     // tester.pump(const Duration(seconds: 2)); // add delay
@@ -55,7 +55,7 @@ void main() {
     final passFinder = find.bySubtype<TextFormField>().last;
     expect(passFinder, findsOneWidget);
     await tester.enterText(passFinder, '123456');
-    final buttonFinder = find.bySubtype<TextButton>();
+    final buttonFinder = find.bySubtype<ElevatedButton>();
 
     await tester.tap(buttonFinder);
     await tester.pumpAndSettle();
