@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:api/api.dart';
 import 'package:demo_login/utils/routers/routers.dart';
@@ -7,11 +8,13 @@ import 'package:flutter/material.dart';
 import 'api/services/services.dart';
 
 void main() {
-  runZoned(() async {
+  runZonedGuarded(() async {
     await ApiRequest.instance.init(
       baseUrl: URLAPI,
     );
-    const MyApp();
+    runApp(const MyApp());
+  }, (error, stack) {
+    log('error main app: $error');
   });
 }
 

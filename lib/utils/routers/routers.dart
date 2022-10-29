@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:demo_login/pages/pages.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +52,6 @@ GoRouter get goRouter => GoRouter(
             name: item.name,
             builder: (_, state) => item.widget(state),
             redirect: (context, state) {
-              log(state.fullpath.toString());
               if (kDebugMode) {
                 return null;
               }

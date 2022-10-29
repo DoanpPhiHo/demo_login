@@ -14,9 +14,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: TextButton(
-          child: const Text('Login'),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+          ),
           onPressed: () => context.pushNamed(Routers.login.name),
+          child: const Text(
+            'Login',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
         ),
       ),
     );
