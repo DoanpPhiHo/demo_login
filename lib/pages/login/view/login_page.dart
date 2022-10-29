@@ -1,6 +1,6 @@
-import 'package:demo_login/models/requests/login_request.dart';
+import 'package:demo_login/api/models/requests/login_request.dart';
 import 'package:demo_login/utils/routers/routers.dart';
-import 'package:demo_login/view_models/profile_view_model.dart';
+import 'package:demo_login/api/view_models/profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

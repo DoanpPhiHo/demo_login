@@ -1,16 +1,9 @@
 # demo_login
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- tổ chức project: 40m
+- create packages api, auth: 40m
+- ui all app: 30m
+- cicd build apk: 20m
+- validator: 10m
+- config routers:6m
+- unit test: 30m

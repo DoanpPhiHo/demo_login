@@ -1,7 +1,8 @@
-import 'package:demo_login/models/reponse/profile_model.dart';
-import 'package:demo_login/models/requests/login_request.dart';
-import 'package:demo_login/services/services.dart';
+import 'package:demo_login/api/models/reponse/profile_model.dart';
+import 'package:demo_login/api/models/requests/login_request.dart';
 import 'package:flutter/material.dart';
+
+import '../services/services.dart';
 
 typedef OnErrorLogin = Function(String);
 typedef OnUserPasswordNotFound = Function(String);

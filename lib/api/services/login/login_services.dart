@@ -1,4 +1,4 @@
-part of 'services.dart';
+part of '../services.dart';
 
 const dynamic fakeReponse = {
   "name": "doan ho",
@@ -14,8 +14,13 @@ class UserPasswordNotFound extends IUserPasswordNotFound {
   const UserPasswordNotFound([String? msg]) : super(msg);
 }
 
-class LoginServices {
+class LoginServices implements ILoginServices {
+  @override
   Future<ProfileModel> login(LoginRequestModel model) async {
+    // await ApiRequest.instance.dioClient.post(
+    //   '$URLAPI/login',
+    //   data: model.toJson(),
+    // );
     await Future.delayed(const Duration(seconds: 2));
     if (model.email == 'hello@example.com' && model.password == '123456') {
       try {

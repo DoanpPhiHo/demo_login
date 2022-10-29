@@ -1,8 +1,18 @@
+import 'dart:async';
+
+import 'package:api/api.dart';
 import 'package:demo_login/utils/routers/routers.dart';
 import 'package:flutter/material.dart';
 
+import 'api/services/services.dart';
+
 void main() {
-  runApp(const MyApp());
+  runZoned(() async {
+    await ApiRequest.instance.init(
+      baseUrl: URLAPI,
+    );
+    const MyApp();
+  });
 }
 
 class MyApp extends StatelessWidget {
